@@ -37,3 +37,40 @@ arr={1,,2,2,3,4,5}
 arr1={5,6,7,1,2}
 output is{1,2,3,4,5,6}    merge two array
 
+
+
+
+
+//////////////////////////////////////////////zigzag program//////////////////////////////////////////////
+
+
+package logicprogra;
+import java.util.*;
+public class Sumofnumberandproduct 
+{
+
+	public static void main(String[] args) 
+	{
+		Scanner sc=new Scanner(System.in);
+		int n=sc.nextInt();
+		int temp=0;
+		int sum=0;
+		int pro=1;
+		
+		while(n>0)
+		{
+			temp=n%10;
+			sum=sum+temp;
+			pro=pro*temp;
+			n=n/10;
+			
+		}
+		System.out.println(sum);
+		System.out.println(pro);
+		
+	}
+
+}
+
+
+
