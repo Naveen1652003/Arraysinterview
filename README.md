@@ -73,4 +73,68 @@ public class Sumofnumberandproduct
 }
 
 
+//////////////////////////////////////////// zig program////////////////////////////////////////////////////
+
+package logicprogra;
+import java.util.*;
+public class Zigprogram {
+	
+	public static int len(int num)
+	{
+		int count=0;
+		while(num!=0)
+		{
+			num=num/10;
+			count++;
+		}
+		return count;
+	}
+	
+	public static int rev(int num)
+	{
+		int rev=0;
+		while(num!=0)
+		{
+			int d=num%10;
+			rev=rev*10+d;
+			num=num/10;
+		}
+		return rev;
+		
+	}
+
+	public static void main(String[] args) 
+	{
+		Scanner sc=new Scanner(System.in);
+		int num1=sc.nextInt();
+		int num2=sc.nextInt();
+		if(len(num1)==len(num2))
+		{
+			int rev1ofnum=rev(num1);
+			int zig=0;
+			while(rev1ofnum!=0)
+			{
+				int d=rev1ofnum%10;
+				zig=zig*10+d;
+				
+				d=num2%10;
+				zig=zig*10+d;
+				rev1ofnum=rev1ofnum/10;
+				num2=num2/10;
+			}
+			System.out.println(zig);
+			
+		}
+		else
+		{
+			System.out.println("Invalid");
+		}
+		
+		
+		
+	}
+
+}
+
+
 
